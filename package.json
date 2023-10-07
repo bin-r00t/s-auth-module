@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts "
+    "dev": "dotenv -e .env.dev nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@koa/router": "^12.0.0",
     "@types/koa": "^2.13.9",
     "@types/koa__router": "^12.0.1",
+    "dotenv-cli": "^7.3.0",
     "koa": "^2.14.2",
     "koa-body": "^6.0.1",
     "koa-csrf": "^5.0.1",
@@ -32,6 +33,8 @@
   },
   "devDependencies": {
     "@types/jasmine": "^5.1.0",
-    "jasmine": "^5.1.0"
+    "dotenv": "^16.3.1",
+    "jasmine": "^5.1.0",
+    "ts-node": "^10.9.1"
   }
 }
