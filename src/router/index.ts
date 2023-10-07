@@ -1,8 +1,8 @@
 // router index
 import Router from '@koa/router';
-import AuthRouters from './auth';
+import AuthRouters from './image-manager';
 const router = new Router();
 
-router.use('/auth', AuthRouters.routes(), AuthRouters.allowedMethods());
+router.use('/img', AuthRouters.routes(), AuthRouters.allowedMethods());
 
 export default router;
