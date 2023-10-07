@@ -1,4 +1,4 @@
-// app index
+import "dotenv/config";
 import Koa from "koa";
 import RootRouter from "./router";
 
