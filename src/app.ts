@@ -1,4 +1,13 @@
-// app index
-import 'dotenv/config'
+import dbClient from "./db";
+import "dotenv/config";
 
-console.log('process', process.env)
+dbClient
+  .db("s-project")
+  .collection("images")
+  .findOne()
+  .then((res) => {
+    console.log("res", res);
+  })
+  .catch((err) => {
+    console.log("err", err);
+  });
