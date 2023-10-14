@@ -1,6 +1,7 @@
 import "dotenv/config";
 import Koa from "koa";
 import RootRouter from "./router";
+import "./websocket";
 
 const app = new Koa();
 
@@ -9,7 +10,6 @@ app.use(RootRouter.routes()).use(RootRouter.allowedMethods());
 app.listen(9000, () => {
   console.log("[*] Server started at: http://localhost:9000");
 });
-
 
 // TODO
 // 1. 上传后，生成url, 保存 { url, path, thumb: binary } 至数据库
